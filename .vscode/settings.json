@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/126d353d-dd4d-40d1-9573-bc9a7bfe7737/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/relecloud-alfonso-moreno",
+    "appService.deploySubpath": "."
+}
