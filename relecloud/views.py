@@ -51,3 +51,20 @@ class DestinationDeleteView(generic.DeleteView):
     model = models.Destination
     template_name = 'destination_confirm_delete.html'
     success_url = reverse_lazy('destinations')
+
+    # views.py
+from django.shortcuts import render, redirect
+from .forms import OpinionForm
+from .models import Opinion
+
+def opiniones(request):
+    opinions = Opinion.objects.all()  # Obtener todas las opiniones existentes
+    form = OpinionForm()
+
+    if request.method == 'POST':
+        form = OpinionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('opiniones')  # Redireccionar después de enviar el formulario
+
+    return render(request, 'tu_app/opiniones.html', {'opinions': opinions, 'form': form})
