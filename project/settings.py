@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
     'https://alfonso-moreno-relecloud.azurewebsites.net/',
     'grupo8-relecloud.azurewebsites.net',
     'https://grupo8-relecloud.azurewebsites.net/',
+    'testing-relecloud.azurewebsites.net',
+    'https://testing-relecloud.azurewebsites.net/'
     ]
 
 
@@ -150,4 +152,7 @@ CSRF_TRUSTED_ORIGINS = ['https://alfonso-moreno-relecloud.azurewebsites.net',
                         'https://alfonso-moreno-relecloud.azurewebsites.net.*',
                         'https://grupo8-relecloud.azurewebsites.net',
                         'https://*.grupo8-relecloud.azurewebsites.net',
-                        'https://grupo8-relecloud.azurewebsites.net.*']
+                        'https://grupo8-relecloud.azurewebsites.net.*',
+                        'https://testing-relecloud.azurewebsites.net',
+                        'https://*.testing-relecloud.azurewebsites.net',
+                        'https://testing-relecloud.azurewebsites.net.*']
