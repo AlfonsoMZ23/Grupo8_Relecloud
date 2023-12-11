@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Relecloud - Opinions
+{% endblock title %}
+
+{% block content %}
+    <h1>Relecloud Opinions</h1>
+
+    <ul class="list-group">
+    {% for opinion in opinions %}
+        <a class="list-group-item list-group-item-action">
+            {{ opinion }}
+        </a>
+    {% endfor %}
+    </ul>
+{% endblock content %}
