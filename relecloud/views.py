@@ -18,8 +18,8 @@ def destinations(request):
     return render(request, 'destinations.html', {'destinations': all_destinations})
 
 def opinions(request):
-    all_destinations = models.Destination.objects.all()
-    return render(request, 'opinions.html', {'opinions': all_destinations})
+    all_opinions = models.Opinions.objects.all()
+    return render(request, 'opinions.html', {'opinions': all_opinions})
 
 class DestinationDetailView(generic.DetailView):
     template_name = 'destination_detail.html'
