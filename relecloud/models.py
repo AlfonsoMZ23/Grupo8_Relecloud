@@ -57,3 +57,10 @@ class InfoRequest(models.Model):
         Cruise,
         on_delete=models.PROTECT
     )
+
+class Opinions(models.Model):
+    opinion = models.TextField(
+        max_length=2000,
+        null=False,
+        blank=False
+    )
