@@ -57,3 +57,6 @@ class InfoRequest(models.Model):
         Cruise,
         on_delete=models.PROTECT
     )
+    class Meta:
+        # Specify the custom table name
+        db_table = 'relecloud_inforequest'
