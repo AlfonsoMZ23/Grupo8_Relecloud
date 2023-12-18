@@ -89,17 +89,24 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        "ENGINE": "django.db.backends.postgresql",
+#        "NAME": "django",
+#        "USER": "alfonso",
+#        "PASSWORD": "1Alfonso1!",
+#        "HOST": "postgre-relecloud.postgres.database.azure.com",
+#        "PORT": "5432",
+#        "OPTIONS":{
+#            "sslmode": "require"
+#        },
+#    }
+#}
+
 DATABASES = {
     'default': {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "django",
-        "USER": "alfonso",
-        "PASSWORD": "1Alfonso1!",
-        "HOST": "postgre-relecloud.postgres.database.azure.com",
-        "PORT": "5432",
-        "OPTIONS":{
-            "sslmode": "require"
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -159,10 +166,8 @@ CSRF_TRUSTED_ORIGINS = ['https://alfonso-moreno-relecloud.azurewebsites.net',
 
 # Use SMTP as the email backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.office365.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'alfonso.moreno.shape@gmail.com'
-EMAIL_HOST_PASSWORD = '1alfonso1'
+EMAIL_HOST_USER = 'grupo8.relecloud@gmail.com'
+EMAIL_HOST_PASSWORD = 'grupo8Relecloud!'
