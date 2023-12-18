@@ -160,22 +160,9 @@ CSRF_TRUSTED_ORIGINS = ['https://alfonso-moreno-relecloud.azurewebsites.net',
 # Use SMTP as the email backend
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# SMTP server settings
-EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server address
-EMAIL_PORT = 587  # Replace with the appropriate port for your SMTP server
-EMAIL_USE_TLS = True  # Use TLS (True) or SSL (False) for the connection
-
-# If your SMTP server requires authentication, provide your credentials
-EMAIL_HOST_USER = 'alfonso.moreno.shape@gmail.com'  # Replace with your email address
-EMAIL_HOST_PASSWORD = '1alfonso1'  # Replace with your email password
-
-# Default "from" address for emails sent by your application
-DEFAULT_FROM_EMAIL = 'alfonso.moreno.shape@gmail.com'  # Replace with your email address
-
-# Additional settings for sending emails
-# Note: These settings might vary based on your specific email provider
-# Consult your email provider's documentation for the correct values
-
-# Use the console backend during development
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'alfonso.moreno.shape@gmail.com'
+EMAIL_HOST_PASSWORD = '1alfonso1'
