@@ -60,3 +60,10 @@ class InfoRequest(models.Model):
     class Meta:
         # Specify the custom table name
         db_table = 'relecloud_inforequest'
+
+class Opinions(models.Model):
+    opinion = models.TextField(
+        max_length=2000,
+        null=False,
+        blank=False
+    )
