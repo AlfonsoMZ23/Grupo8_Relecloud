@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+%zemdq*5_ax99c1y%ol20nevwkgd*r3pf15^c6urbq2)(d6&l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'alfonso-moreno-relecloud.azurewebsites.net',
