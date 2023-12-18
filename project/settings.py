@@ -166,11 +166,11 @@ EMAIL_PORT = 587  # Replace with the appropriate port for your SMTP server
 EMAIL_USE_TLS = True  # Use TLS (True) or SSL (False) for the connection
 
 # If your SMTP server requires authentication, provide your credentials
-EMAIL_HOST_USER = 'your-email@example.com'  # Replace with your email address
-EMAIL_HOST_PASSWORD = 'your-email-password'  # Replace with your email password
+EMAIL_HOST_USER = 'alfonso.moreno.shape@gmail.com'  # Replace with your email address
+EMAIL_HOST_PASSWORD = '1alfonso1'  # Replace with your email password
 
 # Default "from" address for emails sent by your application
-DEFAULT_FROM_EMAIL = 'webmaster@example.com'  # Replace with your email address
+DEFAULT_FROM_EMAIL = 'alfonso.moreno.shape@gmail.com'  # Replace with your email address
 
 # Additional settings for sending emails
 # Note: These settings might vary based on your specific email provider
