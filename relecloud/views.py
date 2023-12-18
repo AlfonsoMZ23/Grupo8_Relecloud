@@ -43,7 +43,7 @@ class InfoRequestCreate(SuccessMessageMixin, generic.CreateView):
         # Send an email to the provided email address
         subject = 'Thank you for your information request'
         message = f'Thank you, {form.cleaned_data["name"]}! We will email you when we have more information about {form.cleaned_data["cruise"]}!'
-        from_email = 'grupo8.relecloud@gmail.com'  # Set your email address
+        from_email = 'grupo8.relecloud@hotmail.com'  # Set your email address
         recipient_list = [form.cleaned_data['email']]
         
         send_mail(subject, message, from_email, recipient_list)
