@@ -67,3 +67,5 @@ class Opinions(models.Model):
         null=False,
         blank=False
     )
+    class Meta:
+        db_table = 'relecloud_opinions'
