@@ -3,6 +3,9 @@
 from django.urls import path
 from . import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('about', views.about, name='about'),
@@ -15,3 +18,6 @@ urlpatterns = [
     path('destination/<int:pk>/update', views.DestinationUpdateView.as_view(), name='destination_form'),
     path('destination/<int:pk>/delete', views.DestinationDeleteView.as_view(), name='destination_confirm_delete')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

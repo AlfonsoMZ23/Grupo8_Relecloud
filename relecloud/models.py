@@ -15,6 +15,9 @@ class Destination(models.Model):
         blank=False
     )
     slug = models.SlugField()
+    image = models.ImageField(
+        upload_to='images/',
+        default='images/imagenDefault.jpg')
 
     def __str__(self) -> str:
         return self.name
