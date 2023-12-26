@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'relecloud.apps.RelecloudConfig',
     'crispy_forms',
     'crispy_bootstrap4', # BORRAR?
+    'sorl.thumbnail',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
