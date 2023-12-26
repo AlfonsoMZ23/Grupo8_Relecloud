@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Destination(models.Model):
@@ -69,3 +70,11 @@ class Opinions(models.Model):
     )
     class Meta:
         db_table = 'relecloud_opinions'
+
+
+class Opinion(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    opinion = models.TextField()
+
+    def __str__(self):
+        return f'{self.user.username} - {self.opinion}'
