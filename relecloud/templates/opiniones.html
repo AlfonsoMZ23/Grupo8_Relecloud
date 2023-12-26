@@ -1,9 +1,5 @@
 <!-- templates/tu_app/opiniones.html -->
 
-
-<!-- he creado este html para la opinion -->
-
-
 {% extends "base.html" %}
 
 {% block title %}
@@ -11,9 +7,11 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Deja tu opinión</h1>
+    <h1>Deje su opinión</h1>
 
     <!-- Mostrar opiniones existentes -->
+    <a href="{% url 'opiniones' %}">Ir a Opiniones</a>
+
     {% for opinion in opinions %}
         <p>{{ opinion.nombre }} dijo: {{ opinion.comentario }}</p>
     {% endfor %}

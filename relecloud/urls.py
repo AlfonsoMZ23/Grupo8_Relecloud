@@ -1,5 +1,3 @@
-##NOT GLOBAL (relecloud)
-
 from django.urls import path
 from . import views
 
@@ -11,6 +9,7 @@ urlpatterns = [
     path('cruise/<int:pk>', views.CruiseDetailView.as_view(), name='cruise_detail'),
     path('info_request', views.InfoRequestCreate.as_view(), name='info_request'),
     path('destination/add', views.DestinationCreateView.as_view(), name='destination_form'),
-    path('destination/<int:pk>/update', views.DestinationUpdateView.as_view(), name='destination_form'),
-    path('destination/<int:pk>/delete', views.DestinationDeleteView.as_view(), name='destination_confirm_delete')
+    path('destination/<int:pk>/update', views.DestinationUpdateView.as_view(), name='destination_update'),
+    path('destination/<int:pk>/delete', views.DestinationDeleteView.as_view(), name='destination_delete'),
+    path('opiniones/', views.opiniones, name='opiniones'),  # Asegúrate de importar 'opiniones' desde tus vistas
 ]
