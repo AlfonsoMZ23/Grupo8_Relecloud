@@ -14,7 +14,7 @@ Autores del proyecto:
 
 Descripción del proyecto:
 
-	Repositorio para la extensión del proyecto Django desde Azure DevOps. 
+	Repositorio para la extensión del proyecto Django 'Relecloud' desde Azure DevOps. 
 
 Funcionalidades:
 
@@ -36,4 +36,4 @@ Funcionalidades:
 Guía de uso:
 
 	Acceder mediante la URL ('https://grupo8-relecloud.azurewebsites.net/')
-	y usar el menú navbar para visitar las distintas páginas.
+	y usar el menú para visitar las distintas páginas.

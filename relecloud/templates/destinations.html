@@ -12,6 +12,7 @@ Relecloud - Destinations
         <a class="list-group-item list-group-item-action" href="{% url 'destination_detail' destination.id %}">
             {{ destination }}
         </a>
+        <img src="{{ destination.image.url }}">
     {% endfor %}
     </ul>
 {% endblock content %}
