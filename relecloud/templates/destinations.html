@@ -12,7 +12,7 @@ Relecloud - Destinations
         <a class="list-group-item list-group-item-action" href="{% url 'destination_detail' destination.id %}">
             {{ destination }}
             {% if destination.imagen %}
-                <img src="{{ destination.imagen.url|thumbnail:'30x30' }}" alt="{{ destination.name }}">
+                <img src="{{ destination.imagen.url }}" alt="{{ destination.name }}" style="width: 30px; height: 30px;">
             {% endif %}
         </a>
     {% endfor %}
