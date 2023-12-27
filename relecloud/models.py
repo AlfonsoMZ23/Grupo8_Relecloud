@@ -15,6 +15,9 @@ class Destination(models.Model):
         blank=False
     )
     slug = models.SlugField()
+    image = models.ImageField(
+        upload_to='images/',
+        default='images/imagenDefault.jpg')
 
     def __str__(self) -> str:
         return self.name
@@ -57,3 +60,15 @@ class InfoRequest(models.Model):
         Cruise,
         on_delete=models.PROTECT
     )
+    class Meta:
+        # Specify the custom table name
+        db_table = 'relecloud_inforequest'
+
+class Opinions(models.Model):
+    opinion = models.TextField(
+        max_length=2000,
+        null=False,
+        blank=False
+    )
+    class Meta:
+        db_table = 'relecloud_opinions'

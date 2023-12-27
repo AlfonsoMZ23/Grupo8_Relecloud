@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,6 +32,8 @@ ALLOWED_HOSTS = [
     'https://alfonso-moreno-relecloud.azurewebsites.net/',
     'grupo8-relecloud.azurewebsites.net',
     'https://grupo8-relecloud.azurewebsites.net/',
+    'testing-relecloud.azurewebsites.net',
+    'https://testing-relecloud.azurewebsites.net/'
     ]
 
 
@@ -101,6 +104,13 @@ DATABASES = {
     }
 }
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -150,4 +160,18 @@ CSRF_TRUSTED_ORIGINS = ['https://alfonso-moreno-relecloud.azurewebsites.net',
                         'https://alfonso-moreno-relecloud.azurewebsites.net.*',
                         'https://grupo8-relecloud.azurewebsites.net',
                         'https://*.grupo8-relecloud.azurewebsites.net',
-                        'https://grupo8-relecloud.azurewebsites.net.*']
+                        'https://grupo8-relecloud.azurewebsites.net.*',
+                        'https://testing-relecloud.azurewebsites.net',
+                        'https://*.testing-relecloud.azurewebsites.net',
+                        'https://testing-relecloud.azurewebsites.net.*']
+
+# Use SMTP as the email backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.office365.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'grupo8.relecloud@hotmail.com'
+EMAIL_HOST_PASSWORD = 'grupo8Relecloud!'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
