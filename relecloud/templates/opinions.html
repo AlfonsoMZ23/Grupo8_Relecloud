@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% block title %}
 Relecloud - Opinions
 {% endblock title %}
@@ -14,4 +16,7 @@ Relecloud - Opinions
         </a>
     {% endfor %}
     </ul>
+
+    <a href="{% url 'opinions_form' %}">Submit an opinion.</a>
+
 {% endblock content %}

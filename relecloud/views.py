@@ -23,6 +23,13 @@ def opinions(request):
     all_opinions = models.Opinions.objects.all()
     return render(request, 'opinions.html', {'opinions': all_opinions})
 
+class OpinionForm(SuccessMessageMixin, generic.CreateView):
+    template_name = 'opinions_form.html'
+    model = models.Opinions
+    fields = ['opinion']
+    success_url = reverse_lazy('index')
+    success_message = 'Your opinion has been submitted!'
+
 class DestinationDetailView(generic.DetailView):
     template_name = 'destination_detail.html'
     model = models.Destination

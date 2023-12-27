@@ -16,7 +16,8 @@ urlpatterns = [
     path('info_request', views.InfoRequestCreate.as_view(), name='info_request'),
     path('destination/add', views.DestinationCreateView.as_view(), name='destination_form'),
     path('destination/<int:pk>/update', views.DestinationUpdateView.as_view(), name='destination_form'),
-    path('destination/<int:pk>/delete', views.DestinationDeleteView.as_view(), name='destination_confirm_delete')
+    path('destination/<int:pk>/delete', views.DestinationDeleteView.as_view(), name='destination_confirm_delete'),
+    path('opinions_form', views.OpinionForm.as_view(), name='opinions_form')
 ]
 
 if settings.DEBUG:
