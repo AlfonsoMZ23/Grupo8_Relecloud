@@ -14,7 +14,7 @@ Autores del proyecto:
 
 Descripción del proyecto:
 
-	Repositorio para la extensión del proyecto Django desde Azure DevOps. 
+	Repositorio para la extensión del proyecto Django 'Relecloud' desde Azure DevOps. 
 
 Funcionalidades:
 
